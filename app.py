@@ -214,5 +214,4 @@ def delete_article(id):
 	return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
-	app.secret_key = 'mysecretkey123'
 	app.run(debug=True)

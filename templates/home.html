@@ -5,10 +5,11 @@
 		<div class="jumbotron text-center">
 			<h1>Welcome to Farticles.</h1>
 			<h3>Here, you can post you stinkiest stories ;)</h3>
-
 			{% if session.logged_in == NULL %}
 				<a href="/register" class="btn btn-primary btn-lg">Register</a>
 				<a href="/login" class="btn btn-success btn-lg">Login</a>
+			{% else %}
+				<a href="/dashboard" class="btn btn-info btn-lg">Dashboard</a>
 			{% endif %}
 
 		</div>
