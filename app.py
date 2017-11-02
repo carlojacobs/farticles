@@ -213,6 +213,6 @@ def delete_article(id):
 	flash('Farticle deleted.', 'warning')
 	return redirect(url_for('dashboard'))
 
-if __name__ == '__main__':
-	app.secret_key = 'mysecretkey123'
-	app.run(debug=True)
+# if __name__ == '__main__':
+# 	app.secret_key = 'mysecretkey123'
+# 	app.run(debug=True)
