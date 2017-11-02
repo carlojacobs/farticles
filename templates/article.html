@@ -3,10 +3,26 @@
 {% block body %}
 	<div class="container">
 		<h1>{{article.title}}</h1>
-		<small>Written by: {{article.author}} on: {{article.date}}</small>
+		<h2><small>Written by: {{article.author}} on: {{article.date}}</small></h2>
 		<hr>
 		<div>
 			<p>{{article.body | safe}}</p>
 		</div>
+		<hr>
+		<a href="/edit_article/{{article._id}}" class="btn btn-secondary">Edit</a>
+		<form action="{{url_for('delete_article', id=article._id)}}" method="POST">
+			<input type="hidden" name="_method" value="DELETE">
+			<input type="submit" name="Delete" class="btn btn-danger" value="Delete">
+		</form>
 	</div>
+
+	<style type="text/css">
+		a {
+			display: inline-block;
+		}
+		form {
+			display: inline-block;
+		}
+	</style>
+
 {% endblock %}
