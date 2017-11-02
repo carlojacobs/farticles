@@ -11,7 +11,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 # Secret key
-app.secret_key = 'mysecretkey123'
+# app.secret_key = 'mysecretkey123'
 
 # pymongo
 client = MongoClient('mongodb://carlo:Dittoenbram1234@carlo-shard-00-00-nwaxe.mongodb.net:27017,carlo-shard-00-01-nwaxe.mongodb.net:27017,carlo-shard-00-02-nwaxe.mongodb.net:27017/test?ssl=true&replicaSet=carlo-shard-0&authSource=admin')
@@ -213,6 +213,6 @@ def delete_article(id):
 	flash('Farticle deleted.', 'warning')
 	return redirect(url_for('dashboard'))
 
-# if __name__ == '__main__':
-# 	app.secret_key = 'mysecretkey123'
-# 	# app.run(debug=True)
+if __name__ == '__main__':
+	app.secret_key = 'mysecretkey123'
+	app.run(debug=True)
