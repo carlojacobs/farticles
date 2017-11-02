@@ -210,7 +210,7 @@ def edit_article(id):
 def delete_article(id):
 	
 	articles.delete_one({"_id": ObjectId(id)})
-	flash('Farticle deleted.', 'success')
+	flash('Farticle deleted.', 'warning')
 	return redirect(url_for('dashboard'))
 
 # if __name__ == '__main__':
