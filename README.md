@@ -7,3 +7,5 @@ Some tools that I used:
 - Flask
 - PyMongo
 - WTForms
+- Bootstrap
+- Flash messages
